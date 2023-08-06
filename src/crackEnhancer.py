@@ -5,8 +5,9 @@ from src.utils import resized_frame
 from src.otsu import otsu_thresholding
 from src.M2GLD import M2GLD_Apply
 def EnhanceImage(user_input_image):
-    M2GLD_img=M2GLD_Apply(user_input_image,1.1,0.45)
+    M2GLD_img=M2GLD_Apply(user_input_image,0.21,.2)
     otsu_img=otsu_thresholding(M2GLD_img)
+    print(otsu_img)
     return otsu_img
 
 
